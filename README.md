@@ -3,12 +3,13 @@
 ## Thông tin cá nhân
 - **Họ tên**: Nguyễn Ngọc Minh - 22685841
 
-## Mô tả project
-Dự án này là một website blog cơ bản, có chức năng đăng ký, đăng nhập, quản lý user, user có thể quản lý các bài blog của mình, có tính năng phân trang
-
 ### Tính năng dự kiến:
 
 ## Hướng dẫn cài đặt và chạy
+```sh
+chmod +x setup.sh
+./setup.sh --createsuperuser
+```
 
 ### Yêu cầu hệ thống
 - Python 3.12.1
