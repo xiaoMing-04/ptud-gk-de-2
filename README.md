@@ -9,7 +9,7 @@
 1. Clone repository:
    ```bash
    git clone https://github.com/username/django-task-app.git
-   cd django-task-app
+   cd ptud-gk-de-2
    ```
 2. Chạy script cài đặt:
    ```bash
