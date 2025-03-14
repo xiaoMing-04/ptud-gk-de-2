@@ -1,41 +1,29 @@
-# README
+# 🚀 Django Task Management App
 
-## Thông tin cá nhân
-- **Họ tên**: Nguyễn Ngọc Minh - 22685841
+## Giới thiệu
+Ứng dụng quản lý công việc bằng Django, hỗ trợ tạo, chỉnh sửa, xóa và cập nhật trạng thái công việc. Người dùng có thể quản lý tài khoản và xem số công việc trễ hạn.
 
-### Tính năng dự kiến:
+## Cài đặt
+1. Clone repository:
+   ```bash
+   git clone https://github.com/username/django-task-app.git
+   cd django-task-app
+   ```
+2. Chạy script cài đặt:
+   ```bash
+   chmod +x setup.sh
+   ./setup.sh --createsuperuser
+   ```
 
-## Hướng dẫn cài đặt và chạy
-```sh
-chmod +x setup.sh
-./setup.sh --createsuperuser
+## Chạy ứng dụng
+```bash
+python manage.py runserver
 ```
+Truy cập tại: `http://localhost:8000/`
 
-### Yêu cầu hệ thống
-- Python 3.12.1
-- Django 5.0
+## Tính năng
+- Đăng ký, đăng nhập, quản lý tài khoản
+- Tạo, sửa, xóa công việc
+- Cập nhật trạng thái công việc
+- Thông báo công việc trễ hạn
 
-### Cài đặt
-1. Clone repo:
-   ```sh
-   git clone https://github.com/xiaoMing-04/flask-tiny-app.git
-   cd anime
-   ```
-2. Cài đặt thư viện cần thiết
-   ```sh
-   pip install -r requirements.txt
-   ```
-3. Chạy cơ sở dữ liệu:
-   ```sh
-   python manage.py migrate
-   ```
-4. Chạy server:
-   ```sh
-   python manage.py runserver
-   ```
-5. Tạo superuser:
-   ```sh
-   python manage createsuperuser
-   ```
-- Truy cập liên kết: `http://127.0.0.1:8000/admin` để đăng nhập dưới quyền admin
-6. Truy cập trang web tại `http://127.0.0.1:8000/`# ptud-gk-de-2
