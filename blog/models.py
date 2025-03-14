@@ -16,7 +16,7 @@ class Task(models.Model):
     status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='P')
     created = models.DateTimeField(default=now)
     finished = models.DateField()
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='task')
 
     def __str__(self):
         return self.title

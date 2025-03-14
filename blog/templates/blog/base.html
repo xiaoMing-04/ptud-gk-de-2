@@ -26,7 +26,7 @@
             {% if user.is_authenticated %}
                 <div class="user-info">
                     <a href="{% url 'home' %}"><img style="width: 100px; height: 100px; object-fit: cover;" src="{{ user.profile.image.url }}" alt="Avatar" class="avatar"></a>
-                    <span>{{ user.username }}</span>
+                    <span style="font-size: 30px;">{{ user.username }}</span>
                     <a href="{% url 'profile' %}">Profile</a>
                     <a href="{% url 'logout' %}">Logout</a>
                 </div>
