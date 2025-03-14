@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+    <h2>{{ object.title }}</h2>
+    <p>{{ object.description }}</p>
+    <p>Tình trạng: {{ object.get_status_display }}</p>
+    <p>Ngày tạo: {{ object.created }}</p>
+    <p>Ngày hoàn thành: {{ object.finished }}</p>
+    <a href="{% url 'task-update' object.id %}">Sửa</a>
+    <a href="{% url 'task-delete' object.id %}">Xóa</a>
+{% endblock %}
