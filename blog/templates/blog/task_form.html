@@ -1,10 +1,27 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
-    <h2>Thêm/Sửa công việc</h2>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Lưu</button>
-    </form>
+<div class="container mt-4">
+    <h2 class="mb-4">Thêm/Sửa Công Việc</h2>
+    <div class="card shadow-sm p-4">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="mb-3">
+                    <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                    {{ field }}
+                    {% if field.errors %}
+                        <div class="text-danger">
+                            {% for error in field.errors %}
+                                <small>{{ error }}</small>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary">Lưu</button>
+            <a href="{% url 'home' %}" class="btn btn-secondary">Hủy</a>
+        </form>
+    </div>
+</div>
 {% endblock %}

@@ -26,8 +26,6 @@ def profile(request):
         finished__lt=now(),
     ).exclude(status='C')
     overdue_count = overdue_tasks.count()
-
-    overdue_tasks.update(status='O')
     
     if request.method == 'POST':
         form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)

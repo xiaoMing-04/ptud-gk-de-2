@@ -6,6 +6,7 @@ from .models import Task
 from .forms import TaskForm
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.utils.timezone import now
 
 
 class TaskListView(LoginRequiredMixin, ListView):
@@ -14,8 +15,13 @@ class TaskListView(LoginRequiredMixin, ListView):
     context_object_name = 'tasks'
 
     def get_queryset(self):
-        if self.request.user.is_superuser:
-            return Task.objects.all()
+        # Cập nhật trạng thái công việc quá hạn
+        Task.objects.filter(
+            user=self.request.user,
+            finished__lt=now()
+        ).exclude(status='C').update(status='O')
+
+        # Lấy danh sách công việc sau khi cập nhật
         return Task.objects.filter(user=self.request.user)
 
 
