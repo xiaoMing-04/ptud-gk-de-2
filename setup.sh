@@ -30,8 +30,10 @@ if [ "$1" == "--createsuperuser" ]; then
     python manage.py createsuperuser
 fi
 
-# Chạy server
-echo "🌐 Chạy server Django..."
-python manage.py runserver
+# Chạy server (tuỳ chọn)
+if [ "$1" == "--runserver" ] || [ "$2" == "--runserver" ]; then
+    echo "🌐 Chạy server Django..."
+    python manage.py runserver
+fi
 
 echo "✅ Hoàn thành!"

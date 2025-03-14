@@ -15,6 +15,7 @@
    ```bash
    chmod +x setup.sh
    ./setup.sh --createsuperuser
+   ./setup.sh --runserver
    ```
 ---
 
@@ -31,18 +32,3 @@ Truy cập ứng dụng tại: **`http://localhost:8000/`**
 - Thông báo công việc trễ hạn.
 
 ---
-
-#### 📂 **Cấu trúc thư mục**
-```
-django-task-app/
-├── manage.py
-├── tasks/        # Ứng dụng quản lý công việc
-├── users/        # Ứng dụng quản lý người dùng
-├── templates/    # Giao diện HTML
-├── static/       # Tệp CSS và JS
-└── setup.sh      # Script cài đặt và chạy server
-```
-
----
-
-💡 **Chúc bạn quản lý công việc hiệu quả!** 🎉
