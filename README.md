@@ -1,5 +1,5 @@
 ### 🚀 **Django Task Management App**
-
+-Họ và tên: Nguyễn Ngọc Minh 22685841
 #### 💡 **Giới thiệu**
 Ứng dụng quản lý công việc bằng Django, hỗ trợ tạo, chỉnh sửa, xóa và cập nhật trạng thái công việc. Người dùng có thể quản lý tài khoản và xem số công việc trễ hạn.
 
